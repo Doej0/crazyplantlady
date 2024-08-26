@@ -1,0 +1,48 @@
+.cards {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Cards will adjust based on available space */
+    gap: 20px;
+    padding-top: 20px;
+    justify-items: center; /* Center items within the grid */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* Allow the cards to adjust their width based on the container */
+    max-width: 300px; /* stops card from stretching too wide*/
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    box-shadow: 5px 5px 5px lightgray;
+    padding: 15px;
+}
+
+.card img {
+    width: 100%;
+    max-width: 250px; /* so the image doesn't get bigger than the card*/
+    align-self: center;
+}
+
+.card .content {
+    flex-grow: 1;
+}
+
+.card .button-container {
+    margin-top: auto;
+    
+}
+
+button {
+    background-color: #a1e5ab;
+    font-size: 16px;
+    padding: 12px 28px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(0.8);
+}
+

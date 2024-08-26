@@ -1,0 +1,32 @@
+
+/* Flexbox alignment */
+.header {
+    display: flex;
+    align-items: center;
+}
+
+/* Title styling */
+.title {
+    margin-right: 10px;
+    font-size: 2rem; 
+}
+
+/* Logo styling */
+.logo {
+    height: 150px; 
+    margin-left: 10px;
+    vertical-align: middle;
+    transition: transform 0.2s;
+}
+
+/* Hover effect when mousing over logo*/
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* logo will adjust size with screen size change */
+@media (max-width: 600px) {
+    .logo {
+        height: 85px;
+    }
+}

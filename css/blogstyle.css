@@ -1,0 +1,206 @@
+@import url("author.css");
+@import url("footer.css");
+
+* { 
+    font-family:"Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+.header {
+    grid-area: header;
+}
+
+.content {
+    grid-area: content;
+}
+
+.main-nav {
+    grid-area: nav;
+}
+
+.side {
+    grid-area: sidebar;
+}
+
+.social {
+    grid-area: socials;
+}
+
+.main-footer {
+    grid-area: footer;
+  }
+
+.wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+      "header"
+      "nav"
+      "content"
+      "sidebar"
+      "socials"
+      "footer";
+  }
+
+  /* Nav styling */
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+li {
+        padding: 10px;
+        color: #8e7dbe;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #8e7dbe;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.content img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* header specific for blogpages */
+.header {
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+
+.title {
+    margin-right: 10px;
+    font-size: 2rem; 
+}
+
+
+/* Logo styling */
+.logo {
+    height: 150px; 
+    width: 150px;
+    margin-left: 10px;
+    vertical-align: middle;
+    transition: transform 0.2s;
+}
+
+/* Hover effect when mousing over logo*/
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* logo will adjust size with screen size change */
+@media (max-width: 600px) {
+    .logo {
+        height: 85px;
+    }
+}
+
+/* back button styling */
+
+.back-button button{
+    font-size: 12px;
+    border-radius: 10px;
+    padding: 10px 24px;
+    background-color: #a1e5ab;
+}
+
+.back-button button{
+    transition: transform 0.3s ease; 
+}
+
+.back-button button:hover {
+    transform: scale(1.1);
+}
+/* social media icons */
+
+.socials {
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+.social-title {
+    font-size: 1.5rem; 
+    color: #8e7dbe; 
+    margin-bottom: 10px; 
+}
+
+.socials img {
+    width: 40px; 
+    height: 40px;
+    object-fit: cover;
+}
+
+.socials ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    gap: 5px; 
+}
+
+.social img {
+    padding: 5px; 
+    transition: transform 0.3s ease; 
+}
+
+.social img:hover {
+    transform: scale(1.2); /* Makes Icon bigger on hover */
+}
+
+.social img {
+    background-color: #320e3b;
+    border-radius: 50%; 
+    padding: 2px; 
+}
+
+/*for screens larger than 500px*/
+@media (min-width: 500px) {
+    .wrapper {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+          "header  header"
+          "nav     nav"
+          "sidebar content"
+          "socials  socials"
+          "footer  footer";
+    }
+    nav ul {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+/* for screens larger than 700px */
+
+@media(min-width:700px)  {
+    .wrapper {
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-areas: 
+        "header header header"
+        "nav content sidebar"
+        "nav content socials"
+        "footer footer footer";
+
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    
+}
+
+img {
+    width: 300px;
+}
